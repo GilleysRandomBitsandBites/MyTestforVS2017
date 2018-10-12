@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\DirectXLib">
+      <UniqueIdentifier>{16579953-3129-4227-9865-b4e27940f2e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Mouse">
+      <UniqueIdentifier>{5d549159-e521-42b4-9e62-05bf12883ebc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Mouse">
+      <UniqueIdentifier>{975252f7-f554-4627-8de7-57d602c18422}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -39,6 +48,12 @@
     <ClCompile Include="Keyboard\KeyboardEvent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Mouse\MouseClass.cpp">
+      <Filter>Source Files\Mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse\MouseEvent.cpp">
+      <Filter>Source Files\Mouse</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -62,11 +77,25 @@
     <ClInclude Include="Keyboard\KeyboardEvent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Mouse\MouseClass.h">
+      <Filter>Header Files\Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse\MouseEvent.h">
+      <Filter>Header Files\Mouse</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="Libs\X64\Debug\DirectXTK.lib" />
-    <Library Include="Libs\X64\Release\DirectXTK.lib" />
-    <Library Include="Libs\X86\Debug\DirectXTK.lib" />
-    <Library Include="Libs\X86\Release\DirectXTK.lib" />
+    <Library Include="Libs\X64\Debug\DirectXTK.lib">
+      <Filter>Source Files\DirectXLib</Filter>
+    </Library>
+    <Library Include="Libs\X64\Release\DirectXTK.lib">
+      <Filter>Source Files\DirectXLib</Filter>
+    </Library>
+    <Library Include="Libs\X86\Debug\DirectXTK.lib">
+      <Filter>Source Files\DirectXLib</Filter>
+    </Library>
+    <Library Include="Libs\X86\Release\DirectXTK.lib">
+      <Filter>Source Files\DirectXLib</Filter>
+    </Library>
   </ItemGroup>
 </Project>
