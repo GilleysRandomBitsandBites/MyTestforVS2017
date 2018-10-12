@@ -72,15 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)ProjectTestfor VS2017\Includes;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)ProjectTestforVS2017\Libs\X86\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)ProjectTestfor VS2017\Includes;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)ProjectTestfor VS2017\Libs\X64\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)ProjectTestforVS2017\Includes;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)ProjectTestforVS2017\Libs\X86\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)ProjectTestfor VS2017\Includes;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)ProjectTestfor VS2017\Libs\X64\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -99,7 +107,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <ConformanceMode>false</ConformanceMode>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -129,7 +137,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <ConformanceMode>false</ConformanceMode>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -139,7 +147,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="ErrorLogger.cpp" />
+    <ClCompile Include="Keyboard\KeyboardClass.cpp" />
+    <ClCompile Include="Keyboard\KeyboardEvent.cpp" />
+    <ClCompile Include="RenderWindow.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="StringConverter.cpp" />
+    <ClCompile Include="WindowContainer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="ErrorLogger.h" />
+    <ClInclude Include="Keyboard\KeyboardClass.h" />
+    <ClInclude Include="Keyboard\KeyboardEvent.h" />
+    <ClInclude Include="RenderWindow.h" />
+    <ClInclude Include="StringConverter.h" />
+    <ClInclude Include="WindowContainer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Libs\X64\Debug\DirectXTK.lib" />
+    <Library Include="Libs\X64\Release\DirectXTK.lib" />
+    <Library Include="Libs\X86\Debug\DirectXTK.lib" />
+    <Library Include="Libs\X86\Release\DirectXTK.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
