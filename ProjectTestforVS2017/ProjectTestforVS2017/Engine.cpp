@@ -48,13 +48,26 @@ void Engine::Update()
 		//outmsg += "\n";
 		//OutputDebugStringA(outmsg.c_str());
 
-		if (me.GetType() == MouseEvent::EventType::WheelUp)
+		//run debug test mouse wheel up/down
+		//if (me.GetType() == MouseEvent::EventType::WheelUp)
+		//{
+		//	OutputDebugStringA("MouseWheelUp\n");
+		//}
+		//if (me.GetType() == MouseEvent::EventType::WheelDown)
+		//{
+		//	OutputDebugStringA("MouseWheelDown\n");
+		//}
+
+		if (me.GetType() == MouseEvent::EventType::Raw_Move)
 		{
-			OutputDebugStringA("MouseWheelUp\n");
-		}
-		if (me.GetType() == MouseEvent::EventType::WheelDown)
-		{
-			OutputDebugStringA("MouseWheelDown\n");
+			//run debug raw mouse relative data
+		//std::string outmsg = "X: ";
+		//outmsg += std::to_string(me.GetPosX());
+		//outmsg += ", ";
+		//outmsg += ", Y: ";
+		//outmsg += std::to_string(me.GetPosY());
+		//outmsg += "\n";
+		//OutputDebugStringA(outmsg.c_str());
 		}
 	}
 }
