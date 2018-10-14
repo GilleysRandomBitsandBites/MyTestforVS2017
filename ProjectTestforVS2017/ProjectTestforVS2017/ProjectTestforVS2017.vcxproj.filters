@@ -22,6 +22,12 @@
     <Filter Include="Source Files\Mouse">
       <UniqueIdentifier>{975252f7-f554-4627-8de7-57d602c18422}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Graphics">
+      <UniqueIdentifier>{5c1df72d-a693-4c05-8c9b-9a43960246d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{6fa5efd6-cdfa-4542-861b-ad86be788330}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -48,18 +54,21 @@
     <ClCompile Include="Keyboard\KeyboardEvent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Mouse\MouseClass.cpp">
+    <ClCompile Include="MouseClass.cpp">
       <Filter>Source Files\Mouse</Filter>
     </ClCompile>
-    <ClCompile Include="Mouse\MouseEvent.cpp">
+    <ClCompile Include="MouseEvent.cpp">
       <Filter>Source Files\Mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\AdapterReader.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Graphics.cpp">
+      <Filter>Source Files\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="WindowContainer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ErrorLogger.h">
@@ -77,11 +86,20 @@
     <ClInclude Include="Keyboard\KeyboardEvent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Mouse\MouseClass.h">
+    <ClInclude Include="MouseClass.h">
       <Filter>Header Files\Mouse</Filter>
     </ClInclude>
-    <ClInclude Include="Mouse\MouseEvent.h">
+    <ClInclude Include="MouseEvent.h">
       <Filter>Header Files\Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowContainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\AdapterReader.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Graphics.h">
+      <Filter>Header Files\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
