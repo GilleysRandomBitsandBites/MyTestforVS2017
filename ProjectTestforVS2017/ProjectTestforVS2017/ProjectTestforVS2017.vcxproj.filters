@@ -54,10 +54,10 @@
     <ClCompile Include="Keyboard\KeyboardEvent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MouseClass.cpp">
+    <ClCompile Include="Mouse\MouseEvent.cpp">
       <Filter>Source Files\Mouse</Filter>
     </ClCompile>
-    <ClCompile Include="MouseEvent.cpp">
+    <ClCompile Include="Mouse\MouseClass.cpp">
       <Filter>Source Files\Mouse</Filter>
     </ClCompile>
     <ClCompile Include="Graphics\AdapterReader.cpp">
@@ -86,14 +86,14 @@
     <ClInclude Include="Keyboard\KeyboardEvent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MouseClass.h">
-      <Filter>Header Files\Mouse</Filter>
-    </ClInclude>
-    <ClInclude Include="MouseEvent.h">
-      <Filter>Header Files\Mouse</Filter>
-    </ClInclude>
     <ClInclude Include="WindowContainer.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse\MouseEvent.h">
+      <Filter>Header Files\Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse\MouseClass.h">
+      <Filter>Header Files\Mouse</Filter>
     </ClInclude>
     <ClInclude Include="Graphics\AdapterReader.h">
       <Filter>Header Files\Graphics</Filter>

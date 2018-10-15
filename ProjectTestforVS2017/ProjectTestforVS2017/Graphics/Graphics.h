@@ -5,9 +5,14 @@ class Graphics
 {
 public:
 	bool Initialize(HWND hwnd, int width, int height);
-	void RenderFrame();
+	//void RenderFrame();
 private:
 	bool InitializeDirectX(HWND hwnd, int width, int height);
+
+	//ID3D11Device * device;
+	//ID3D11DeviceContext * deviceContext;
+	//IDXGISwapChain * swapchain;
+	//ID3D11RenderTargetView * renderTargetView;
 
 	Microsoft::WRL::ComPtr<ID3D11Device> device;
 	Microsoft::WRL::ComPtr<ID3D11DeviceContext> deviceContext;
