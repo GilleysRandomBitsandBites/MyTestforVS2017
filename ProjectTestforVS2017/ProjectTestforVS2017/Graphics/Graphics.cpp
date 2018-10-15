@@ -49,16 +49,16 @@ bool Graphics::InitializeDirectX(HWND hwnd, int width, int height)
 	HRESULT hr;
 	hr = D3D11CreateDeviceAndSwapChain(adapters[0].pAdapter, //IDXGI Adapter
 										D3D_DRIVER_TYPE_UNKNOWN,
-										NULL, //For software driver type
-										NULL, //flags for runtime layers
-										NULL, //feature level arrays
-										0, //# of feature levels in array
+										NULL, //FOR SOFTWARE DRIVER TYPE
+										NULL, //FLAGS FOR RUNTIME LAYERS
+										NULL, //FEATURE LEVELS ARRAY
+										0, //# OF FEATURE LEVELS IN ARRAY
 										D3D11_SDK_VERSION,
-										&scd, //swapchain description
-										this->swapchain.GetAddressOf(), //swapchain address
-										this->device.GetAddressOf(), //device address
-										NULL, //supported feature level
-										this->deviceContext.GetAddressOf()); //device context address
+										&scd, //Swapchain description
+										this->swapchain.GetAddressOf(), //Swapchain Address
+										this->device.GetAddressOf(), //Device Address
+										NULL, //Supported feature level
+										this->deviceContext.GetAddressOf()); //Device Context Address
 
 	if (FAILED(hr))
 	{
