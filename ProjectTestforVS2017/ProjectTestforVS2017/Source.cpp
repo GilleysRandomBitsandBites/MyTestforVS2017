@@ -8,19 +8,20 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	_In_ int       nCmdShow)
 {
 	Engine engine;
- 	engine.Initialize(hInstance, "Title", "MyWindowClass", 800, 600);
-		
-	while (engine.ProcessMessages() == true)
+	if (engine.Initialize(hInstance, "Title", "MyWindowClass", 800, 600))
 	{
-		engine.Update();
-		engine.RenderFrame();
+		while (engine.ProcessMessages() == true)
+		{
+			engine.Update();
+			engine.RenderFrame();
+		}
 	}
 	return 0;
 }
 
 //Graphics Pipeline
-//Input Assembler has to be set up
-//Vertex Shader has to be programmed
+//Input Assembler has to be set up (Completed)
+//Vertex Shader has to be programmed (Completed)
 //Rasterizer has to be set up
 //Pixel Shader has to be programmed
 //Output Merger has to be set up

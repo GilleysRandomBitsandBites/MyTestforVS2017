@@ -1,5 +1,6 @@
 #pragma once
 #include "AdapterReader.h"
+#include "Shaders.h"
 
 class Graphics
 {
@@ -21,6 +22,8 @@ private:
 
 	//Part of Graphics Pipeline -Input Assember
 	Microsoft::WRL::ComPtr<ID3D11InputLayout> inputLayout;
-	Microsoft::WRL::ComPtr<ID3D10Blob>	vertex_shader_buffer;
+
+	VertexShader vertexshader;
+	
 };
 
