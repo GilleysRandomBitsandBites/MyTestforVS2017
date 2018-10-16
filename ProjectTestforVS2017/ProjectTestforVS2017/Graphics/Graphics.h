@@ -21,7 +21,7 @@ private:
 	Microsoft::WRL::ComPtr<ID3D11RenderTargetView> renderTargetView;
 
 	//Part of Graphics Pipeline -Input Assember
-	Microsoft::WRL::ComPtr<ID3D11InputLayout> inputLayout;
+	
 
 	VertexShader vertexshader;
 	
