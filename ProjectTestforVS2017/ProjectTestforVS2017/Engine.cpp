@@ -78,7 +78,7 @@ void Engine::Update()
 	}
 }
 
-//void Engine::RenderFrame()
-//{
-//	gfx.RenderFrame();
-//}
+void Engine::RenderFrame()
+{
+	gfx.RenderFrame();
+}

@@ -9,19 +9,19 @@ bool Graphics::Initialize(HWND hwnd, int width, int height)
 	return true;
 }
 
-/*void Graphics::RenderFrame()
+void Graphics::RenderFrame()
 {
 	float bgcolor[] = { 0.0f, 0.0f, 1.0f, 1.0f };
 	this->deviceContext->ClearRenderTargetView(this->renderTargetView.Get(), bgcolor);
 	this->swapchain->Present(1, NULL);
-}*/
+}
 
 bool Graphics::InitializeDirectX(HWND hwnd, int width, int height)
 {
 	std::vector<AdapterData> adapters = AdapterReader::GetAdapters();
 
 	
-/*	if (adapters.size() < 1)
+	if (adapters.size() < 1)
 	{
 		ErrorLogger::Log("No IDXGI Adapters found.");
 		return false;
@@ -83,7 +83,7 @@ bool Graphics::InitializeDirectX(HWND hwnd, int width, int height)
 		return false;
 	}
 
-	this->deviceContext->OMSetRenderTargets(1, this->renderTargetView.GetAddressOf(), NULL);*/
+	this->deviceContext->OMSetRenderTargets(1, this->renderTargetView.GetAddressOf(), NULL);
 
 	return true;
 }
