@@ -17,3 +17,10 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	}
 	return 0;
 }
+
+//Graphics Pipeline
+//Input Assembler has to be set up
+//Vertex Shader has to be programmed
+//Rasterizer has to be set up
+//Pixel Shader has to be programmed
+//Output Merger has to be set up

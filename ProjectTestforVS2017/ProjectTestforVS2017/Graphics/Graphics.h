@@ -8,7 +8,7 @@ public:
 	void RenderFrame();
 private:
 	bool InitializeDirectX(HWND hwnd, int width, int height);
-
+	bool InitializeShaders();
 	//ID3D11Device * device;
 	//ID3D11DeviceContext * deviceContext;
 	//IDXGISwapChain * swapchain;
@@ -18,4 +18,9 @@ private:
 	Microsoft::WRL::ComPtr<ID3D11DeviceContext> deviceContext;
 	Microsoft::WRL::ComPtr<IDXGISwapChain> swapchain;
 	Microsoft::WRL::ComPtr<ID3D11RenderTargetView> renderTargetView;
+
+	//Part of Graphics Pipeline -Input Assember
+	Microsoft::WRL::ComPtr<ID3D11InputLayout> inputLayout;
+	Microsoft::WRL::ComPtr<ID3D10Blob>	vertex_shader_buffer;
 };
+
