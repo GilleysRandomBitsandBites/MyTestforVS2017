@@ -22,6 +22,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 //Graphics Pipeline
 //Input Assembler has to be set up (Completed)
 //Vertex Shader has to be programmed (Completed)
-//Rasterizer has to be set up
-//Pixel Shader has to be programmed
-//Output Merger has to be set up
+//Rasterizer has to be set up (Completed)
+//Pixel Shader has to be programmed (Completed)
+//Output Merger has to be set up (Completed)
