@@ -26,5 +26,5 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 //Pixel Shader has to be programmed (Completed)
 //Output Merger has to be set up (Completed)
 
-//Create our Vertex Buffer
-//Draw
+//Create our Vertex Buffer (Completed)
+//Draw (Completed)
