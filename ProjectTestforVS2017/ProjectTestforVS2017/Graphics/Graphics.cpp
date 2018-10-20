@@ -33,6 +33,12 @@ void Graphics::RenderFrame()
 
 	this->deviceContext->Draw(3, 0);
 
+	//Draw text
+	spriteBatch->Begin();
+	spriteFont->DrawString(spriteBatch.get(), L"HELLO WORLD", DirectX::XMFLOAT2(0, 0), DirectX::Colors::White, 0.0f, DirectX::XMFLOAT2(0.0f, 0.0f), DirectX::XMFLOAT2(1.0f, 1.0f));
+	spriteBatch->End();
+
+
 	this->swapchain->Present(1, NULL);
 }
 
@@ -129,6 +135,10 @@ bool Graphics::InitializeDirectX(HWND hwnd, int width, int height)
 		ErrorLogger::Log(hr, "Failed to create rasterizer state.");
 		return false;
 	}
+
+	spriteBatch = std::make_unique<DirectX::SpriteBatch>(this->deviceContext.Get());
+	spriteFont = std::make_unique<DirectX::SpriteFont>(this->device.Get(), L"Data\\Fonts\\comic_sans_ms_16.spritefont");
+
 
 	return true;
 }
