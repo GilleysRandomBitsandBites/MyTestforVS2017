@@ -101,6 +101,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
+      <TargetMachine />
     </Link>
     <FxCompile>
       <ShaderModel>5.0</ShaderModel>
@@ -117,7 +118,8 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <TargetMachine>MachineX64</TargetMachine>
+      <TargetMachine>
+      </TargetMachine>
     </Link>
     <FxCompile>
       <ShaderModel>5.0</ShaderModel>
@@ -138,7 +140,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <TargetMachine>MachineX86</TargetMachine>
+      <TargetMachine>
+      </TargetMachine>
     </Link>
     <FxCompile>
       <ShaderModel>5.0</ShaderModel>
@@ -158,7 +161,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <TargetMachine>MachineX64</TargetMachine>
+      <TargetMachine>
+      </TargetMachine>
     </Link>
     <FxCompile>
       <ShaderModel>5.0</ShaderModel>
