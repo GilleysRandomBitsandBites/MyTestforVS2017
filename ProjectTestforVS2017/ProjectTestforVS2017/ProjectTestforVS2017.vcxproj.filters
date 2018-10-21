@@ -112,20 +112,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="Libs\X64\Debug\DirectXTK.lib">
-      <Filter>Source Files\DirectXLib</Filter>
-    </Library>
-    <Library Include="Libs\X64\Release\DirectXTK.lib">
-      <Filter>Source Files\DirectXLib</Filter>
-    </Library>
-    <Library Include="Libs\X86\Debug\DirectXTK.lib">
-      <Filter>Source Files\DirectXLib</Filter>
-    </Library>
-    <Library Include="Libs\X86\Release\DirectXTK.lib">
-      <Filter>Source Files\DirectXLib</Filter>
-    </Library>
-  </ItemGroup>
-  <ItemGroup>
     <FxCompile Include="VertexShader.hlsl">
       <Filter>Resource Files</Filter>
     </FxCompile>
