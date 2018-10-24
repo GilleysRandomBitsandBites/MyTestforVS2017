@@ -34,3 +34,4 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
 //Create our Vertex Buffer (Completed)
 //Draw (Completed)
+//Create our indices Buffer
