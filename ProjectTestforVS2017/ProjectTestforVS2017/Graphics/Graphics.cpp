@@ -34,7 +34,7 @@ void Graphics::RenderFrame()
 
 	//Update Constant Buffer
 	static float yOff = 0.5f;
-	yOff -= 0.01f;
+	yOff = 0.5f;
 	constantBuffer.data.xOffset = 0.0f;
 	constantBuffer.data.yOffset = yOff;
 	if (!constantBuffer.ApplyChanges())
