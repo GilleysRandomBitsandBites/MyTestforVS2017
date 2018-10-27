@@ -37,4 +37,5 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 //Create our indices Buffer (Completed)
 //Create Vertex Buffer Template (Completed)
 //Constant Buffers Setup for vertex shader pipeline (Completed)
-//Constant Buffer Template
+//Constant Buffer Template (Completed)
+//Setup Matrix Transformation (Completed)

@@ -33,10 +33,9 @@ void Graphics::RenderFrame()
 	UINT offset = 0;
 
 	//Update Constant Buffer
-	static float yOff = 0.5f;
-	yOff = 0.5f;
-	constantBuffer.data.xOffset = 0.0f;
-	constantBuffer.data.yOffset = yOff;
+	constantBuffer.data.mat = DirectX::XMMatrixRotationRollPitchYaw(0.0f, 0.0f, DirectX::XM_PIDIV2); //Identity Matrix is all 1's
+	//We also have XMMatrixScaling(), and XMMatrixTranslation()
+	constantBuffer.data.mat = DirectX::XMMatrixTranspose(constantBuffer.data.mat); //This transposes from row major to column major which VertexShader.hlsl needs
 	if (!constantBuffer.ApplyChanges())
 		return;
 	this->deviceContext->VSSetConstantBuffers(0, 1, this->constantBuffer.GetAddressOf());
