@@ -35,30 +35,13 @@ void Graphics::RenderFrame()
 	UINT offset = 0;
 
 	//Update Constant Buffer
-	DirectX::XMMATRIX world = DirectX::XMMatrixIdentity();
+	XMMATRIX world = XMMatrixIdentity();	
 	
-	static DirectX::XMVECTOR eyePos = DirectX::XMVectorSet(0.0f, -4.0f, -2.0f, 0.0f);
-	//Proper way to update a XMVECTOR, eg. having eyePos moving
-	DirectX::XMFLOAT3 eyePosFloat3;
-	DirectX::XMStoreFloat3(&eyePosFloat3, eyePos);
-	eyePosFloat3.y += 0.01f;
-	eyePos = DirectX::XMLoadFloat3(&eyePosFloat3);
 
-	static DirectX::XMVECTOR lookAtPos = DirectX::XMVectorSet(0.0f, 0.0f, 0.0f, 0.0f); //Look at Position set at origin of world
-	static DirectX::XMVECTOR upVector = DirectX::XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f); //Positive y axis looking along
-	DirectX::XMMATRIX viewMatrix = DirectX::XMMatrixLookAtLH(eyePos, lookAtPos, upVector);
-	
-	float fovDegrees = 90.0f; //90 degree Field Of View
-	float fovRadians = (fovDegrees / 360.0f) * DirectX::XM_2PI; //Converts our field of view to radians
-	float aspectRatio = static_cast<float>(this->windowWidth) / static_cast<float>(this->windowHeight); //Needs static_cast or will be integer division would round off
-	float nearZ = 0.1f;
-	float farZ = 1000.0f;
-	DirectX::XMMATRIX projectionMatrix = DirectX::XMMatrixPerspectiveFovLH(fovRadians, aspectRatio, nearZ, farZ);
-
-
-	constantBuffer.data.mat = world * viewMatrix * projectionMatrix; //Our view now is three matrices multiplied
+	constantBuffer.data.mat = world * camera.GetviewMatrix() * camera.GetProjectionMatrix(); //Our view now is three matrices multiplied
 	//We also have XMMatrixScaling(), and XMMatrixTranslation() and XMMatrixRollPitchYaw()
-	constantBuffer.data.mat = DirectX::XMMatrixTranspose(constantBuffer.data.mat); //This transposes from row major to column major which VertexShader.hlsl needs
+	constantBuffer.data.mat = XMMatrixTranspose(constantBuffer.data.mat); //This transposes from row major to column major which VertexShader.hlsl needs
+
 	if (!constantBuffer.ApplyChanges())
 		return;
 	this->deviceContext->VSSetConstantBuffers(0, 1, this->constantBuffer.GetAddressOf());
@@ -325,14 +308,16 @@ bool Graphics::InitializeScene()
 	}
 
 	//Initialize Constant Buffer(s)
-	
-
 	hr = this->constantBuffer.Initialize(this->device.Get(), this->deviceContext.Get());
 	if (FAILED(hr))
 	{
 		ErrorLogger::Log(hr, "Failed to initialize constant buffer.");
 		return false;
 	}
+
+	camera.SetPosition(0.0f, 0.0f, -2.0f);
+	camera.SetProjectionValues(90.0f, static_cast<float>(windowWidth) / static_cast<float>(windowHeight), 0.1f, 1000.0f);
+
 
 	return true;
 

@@ -39,4 +39,5 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 //Constant Buffers Setup for vertex shader pipeline (Completed)
 //Constant Buffer Template (Completed)
 //Setup Matrix Transformation (Completed)
-//Setup View/Projection Matrix
+//Setup View/Projection Matrix(Completed)
+//Setup Camera Class
